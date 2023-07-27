@@ -15,34 +15,40 @@
           <div class="col-md-8 ps-md-0">
             <div class="auth-form-wrapper px-4 py-5">
               <a href="#" class="noble-ui-logo d-block mb-2">Noble<span>UI</span></a>
-              <h5 class="text-muted fw-normal mb-4">Create a free account.</h5>
-              <form class="forms-sample">
+              <h5 class="text-muted fw-normal mb-4">{{ __('auth.new_account') }}</h5>
+              
+              <!-- Formulario de Registro -->
+              <form class="forms-sample" action="">
+
                 <div class="mb-3">
-                  <label for="exampleInputUsername1" class="form-label">Username</label>
+                  <label for="exampleInputUsername1" class="form-label">{{ __('auth.user') }}</label>
                   <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="Username" placeholder="Username">
                 </div>
+
                 <div class="mb-3">
-                  <label for="userEmail" class="form-label">Email address</label>
+                  <label for="userEmail" class="form-label">{{ __('auth.email') }}</label>
                   <input type="email" class="form-control" id="userEmail" placeholder="Email">
                 </div>
+
                 <div class="mb-3">
-                  <label for="userPassword" class="form-label">Password</label>
+                  <label for="userPassword" class="form-label">{{ __('auth.password') }}</label>
                   <input type="password" class="form-control" id="userPassword" autocomplete="current-password" placeholder="Password">
                 </div>
+
                 <div class="form-check mb-3">
                   <input type="checkbox" class="form-check-input" id="authCheck">
-                  <label class="form-check-label" for="authCheck">
-                    Remember me
-                  </label>
+                  <label class="form-check-label" for="authCheck">{{ __('auth.remember') }}</label>
                 </div>
+
                 <div>
-                  <a href="{{ url('/') }}" class="btn btn-primary me-2 mb-2 mb-md-0">Sign up</a>
+                  <a href="{{ url('/') }}" class="btn btn-primary me-2 mb-2 mb-md-0">{{ __('auth.login') }}</a>
                   <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
                     <i class="btn-icon-prepend" data-feather="twitter"></i>
-                    Sign up with twitter
+                    {{ __('auth.login_twitter') }}
                   </button>
                 </div>
-                <a href="{{ url('/auth/login') }}" class="d-block mt-3 text-muted">Already a user? Sign in</a>
+
+                <a href="{{ url('/auth/login') }}" class="d-block mt-3 text-muted">{{ __('auth.user_exists') }}</a>
               </form>
             </div>
           </div>
